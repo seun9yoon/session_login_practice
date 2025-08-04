@@ -34,6 +34,7 @@ function getUserInfo() {
 
 // 유저 정보를 렌더링 시키는 함수
 function renderUserInfo(userInfo) {
+  console.log(userInfo)
   main.style.display = "block";
   form.style.display = "none";
   userName.textContent = userInfo.user_name;
@@ -57,7 +58,8 @@ loginButton.onclick = () => {
 
 // 로그아웃 버튼을 클릭하는 경우
 logoutButton.onclick = () => {
-  logout().then((res) => {
+  logout()
+  .then((res) => {
     console.log(res);
     renderLoginForm();
   });
